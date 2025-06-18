@@ -1,0 +1,67 @@
+plugins {
+    id 'java'
+}
+
+group 'net.gamedoctor.hakaton.Main'
+version '1.0'
+
+rootProject.tasks.named("jar") {
+    duplicatesStrategy = 'include'
+}
+
+//Get dependencies from Maven central repository
+repositories {
+
+    mavenCentral()
+    google()
+
+    maven {
+        url 'https://m2.dv8tion.net/releases'
+    }
+}
+
+configurations {
+    extraLibs
+}
+
+
+dependencies {
+
+    implementation 'org.jetbrains:annotations:20.1.0'
+
+    implementation 'org.telegram:telegrambots-longpolling:8.3.0'
+    extraLibs 'org.telegram:telegrambots-longpolling:8.3.0'
+
+    implementation 'org.telegram:telegrambots-client:8.3.0'
+    extraLibs 'org.telegram:telegrambots-client:8.3.0'
+
+    implementation 'com.mysql:mysql-connector-j:8.3.0'
+    extraLibs 'com.mysql:mysql-connector-j:8.3.0'
+
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.3'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+    extraLibs 'com.google.code.gson:gson:2.10.1'
+
+
+
+    implementation 'org.projectlombok:lombok:1.18.22'
+    //extraLibs 'org.projectlombok:lombok:1.18.22'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'net.gamedoctor.hakaton.Main'
+    }
+    from {
+        configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
