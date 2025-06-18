@@ -11,9 +11,9 @@ from telethon.tl.types import Channel, Chat, ChannelParticipantsSearch
 from telethon.tl.functions.channels import GetParticipantsRequest
 from telethon.tl.functions.messages import GetHistoryRequest
 
-API_ID = 22666963
-API_HASH = "ba1e133a20693706e111b47ea830e20a"
-TG_USERNAME = "Alexander_Lunin_worker"          # ← уникальное имя сессии
+API_ID = 0
+API_HASH = ""
+TG_USERNAME = ""          # ← уникальное имя сессии
 client = TelegramClient(TG_USERNAME, API_ID, API_HASH)
 
 PROJECT_DIR = Path(__file__).resolve().parent
