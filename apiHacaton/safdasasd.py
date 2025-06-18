@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Dict, List
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from telethon import TelegramClient
 from telethon.tl.types import Channel, Chat, ChannelParticipantsSearch
 from telethon.tl.functions.channels import GetParticipantsRequest
