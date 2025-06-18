@@ -34,7 +34,7 @@ public class ChatGPT {
             connection = (HttpURLConnection) obj.openConnection(pr);
 
             connection.setRequestMethod("POST");
-            connection.setRequestProperty("Authorization", "Bearer " + "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");
+            connection.setRequestProperty("Authorization", "Bearer " + "");
             connection.setRequestProperty("Content-Type", "application/json");
 
             String model = "chatgpt-4o-latest";
