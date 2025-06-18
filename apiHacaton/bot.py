@@ -26,19 +26,19 @@ log = logging.getLogger(__name__)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # ── Telegram creds ────────────────────────────────────────
-BOT_SESSION = "Alexander_Lunin_second"
-API_ID = 22666963
-API_HASH = "ba1e133a20693706e111b47ea830e20a"
+BOT_SESSION = ""
+API_ID = 0
+API_HASH = ""
 client = TelegramClient(BOT_SESSION, API_ID, API_HASH)
 
 # ── GigaChat creds ────────────────────────────────────────
-GIGA_CLIENT_ID = "15f8eab0-716a-4bbb-a693-76c7463cc652"
+GIGA_CLIENT_ID = ""
 GIGA_BASIC = (
-    "MTVmOGVhYjAtNzE2YS00YmJiLWE2OTMtNzZjNzQ2M2NjNjUyOmFlNjgwODZhLWI2NzYtNDg0ZS05MDFlLWVlZmE0YTNiNDIxOQ=="
+    ""
 )
-SCOPE = "GIGACHAT_API_PERS"
-AUTH_URL = "https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-CHAT_URL = "https://gigachat.devices.sberbank.ru/api/v1/chat/completions"
+SCOPE = ""
+AUTH_URL = ""
+CHAT_URL = ""
 
 # ── HTTPS адаптер для TLS ────────────────────────────────
 class TLSAdapter(HTTPAdapter):
