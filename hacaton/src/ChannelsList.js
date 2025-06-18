@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import { Typography } from 'antd';
 import { styledComponents as S } from './style/style';
 import {checkSession} from './config/api'
 

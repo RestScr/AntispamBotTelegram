@@ -1,7 +1,6 @@
-import React,{useState,useEffect}from "react";
+import React from "react";
 import { FixedSizeList as List } from "react-window";
 import { styledComponents as S } from "./style/style";
-import {loadLog} from "./config/api";
 
 export default function Log({log}) {
 

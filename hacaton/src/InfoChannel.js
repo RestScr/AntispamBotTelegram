@@ -23,7 +23,6 @@ export default function InfoChannel() {
         FLOOD: false,
     });
 
-    // ключи, по которым сейчас идёт запрос
     const [pending, setPending] = useState(new Set());
 
     const [log, setLog] = useState([]);
@@ -32,7 +31,6 @@ export default function InfoChannel() {
     const [isModalOpenLog, setIsModalOpenLog] = useState(false);
     const [isModalOpenChecking, setIsModalOpenChecking] = useState(false);
 
-    // Инициализация из channel + логи
     useEffect(() => {
         if (channel?.filters) {
             const init = { LINK:false, LLM:false, SPAM:false, FLOOD:false };
@@ -50,10 +48,10 @@ export default function InfoChannel() {
     }, [channel]);
 
     const toggle = async key => {
-        if (pending.has(key)) return;                // защита от дабл-кликов
+        if (pending.has(key)) return;
         const next = !filter[key];
 
-        setPending(p => new Set(p).add(key));        // ставим лоадер
+        setPending(p => new Set(p).add(key));
 
         try {
             const res = next
