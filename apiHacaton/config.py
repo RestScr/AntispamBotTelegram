@@ -1,9 +1,9 @@
 import hashlib
 
-MYSQL_PASSWORD = "grGLPug5dl37"
-MYSQL_USER = "kosfaton_hakaton"
-MYSQL_DATABASE = "kosfaton_hakaton"
-MYSQL_HOST = "kosfaton.beget.tech"
+MYSQL_PASSWORD = ""
+MYSQL_USER = ""
+MYSQL_DATABASE = ""
+MYSQL_HOST = ""
 DEBUG = False
 BOT_TOKEN = ""
 BOT_TOKEN_SECRET = hashlib.sha256(BOT_TOKEN.encode()).digest()
